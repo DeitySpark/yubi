@@ -16,4 +16,4 @@ create table if not exists user (
     create_time timestamp default current_timestamp
 ) engine=innodb default charset=utf8mb4 comment='用户表'
 
-
+   
