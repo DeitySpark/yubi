@@ -88,9 +88,6 @@ export default defineConfig({
     plugins: ['duration'],
   },
   /**
-   * @name 国际化插件
-   * @doc https://umijs.org/docs/max/i18n
-   */ /**
    * @name antd 插件
    * @description 内置了 babel import 插件
    * @doc https://umijs.org/docs/max/antd#antd
@@ -127,18 +124,15 @@ export default defineConfig({
    * @doc https://pro.ant.design/zh-cn/docs/openapi/
    */
   openAPI: [
+    // 配置一个接口地址
     {
-      requestLibPath: "import { request } from '@umijs/max'",
-      // 或者使用在线的版本
-      // schemaPath: "https://gw.alipayobjects.com/os/antfincdn/M%24jrzTTYJN/oneapi.json"
-      schemaPath: join(__dirname, 'oneapi.json'),
+      projectName: "yubi",
+      requestLibPath: "import { request } from 'umi'",
+      // 接口地址
+      schemaPath: "http://localhost:8082/api/v2/api-docs",
+      // 生成mock的配置
       mock: false,
-    },
-    {
-      requestLibPath: "import { request } from '@umijs/max'",
-      schemaPath: 'https://gw.alipayobjects.com/os/antfincdn/CA1dOm%2631B/openapi.json',
-      projectName: 'swagger',
-    },
+    }
   ],
   mfsu: {
     strategy: 'normal',

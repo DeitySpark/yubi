@@ -22,8 +22,7 @@ const Admin: React.FC = () => {
           style={{
             textAlign: 'center',
           }}
-        >
-          <SmileTwoTone /> Ant Design Pro <HeartTwoTone twoToneColor="#eb2f96" /> You
+        >鱼BI<HeartTwoTone twoToneColor="#eb2f96" /> You
         </Typography.Title>
       </Card>
       <p
